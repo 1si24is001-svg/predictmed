@@ -1,0 +1,113 @@
+{
+  "target": "y_deterioration_12m",
+  "features": [
+    "age",
+    "rural",
+    "sdoh_index",
+    "plan_medicare",
+    "plan_medicaid",
+    "dx_diabetes",
+    "dx_hypertension",
+    "dx_heart_failure",
+    "ckd_coded",
+    "ckd_coded_stage",
+    "n_pcp_12m",
+    "n_ip_12m",
+    "n_aki_24m",
+    "months_since_nephrology",
+    "allowed_12m",
+    "rx_sglt2i_active",
+    "rx_diuretic_active",
+    "rx_insulin_active",
+    "rx_metformin_active",
+    "rx_nsaid_fills_6m",
+    "rx_rasi_pdc_12m",
+    "twin_egfr_now",
+    "twin_slope_yr",
+    "twin_slope_sd_yr",
+    "twin_level_sd",
+    "twin_runway_months",
+    "twin_p_eskd_24m",
+    "twin_n_obs"
+  ],
+  "n_features": 28,
+  "cv_auprc": 0.5265370734301914,
+  "cv_auprc_all_features": 0.5327086712268682,
+  "leakage_quarantined": {
+    "nephro_visits_90d": 0.05
+  },
+  "redundant_dropped": [
+    "n_nephro_24m",
+    "egfr_mean_12m",
+    "kfre_2y",
+    "egfr_last",
+    "egfr_min_24m",
+    "twin_p_rapid"
+  ],
+  "selection_trail": [
+    {
+      "step": "base",
+      "groups": [
+        "demographics_sdoh",
+        "diagnoses",
+        "utilization"
+      ],
+      "auprc": 0.3791426797639071
+    },
+    {
+      "step": "add",
+      "group": "pharmacy",
+      "auprc": 0.43218203994997584,
+      "gain": 0.05303936018606875
+    },
+    {
+      "step": "add",
+      "group": "digital_twin",
+      "auprc": 0.5256155060115527,
+      "gain": 0.09343346606157688
+    }
+  ],
+  "permutation_importance": {
+    "age": 0.002458589629793876,
+    "female": -0.00028549904659843267,
+    "rural": 2.741358782602325e-05,
+    "sdoh_index": 0.0011655229979768977,
+    "plan_medicare": -1.2745945967081637e-05,
+    "plan_medicaid": 0.0002039052083846471,
+    "dx_diabetes": 0.011022521974949758,
+    "dx_hypertension": 0.003053830128233163,
+    "dx_heart_failure": 0.0010874682258963004,
+    "dx_cvd": -0.0010897575543283484,
+    "ckd_coded": 0.00022396271871198228,
+    "ckd_coded_stage": 0.027273930355276477,
+    "dkd_coded": -0.000320811807371868,
+    "n_pcp_12m": 0.0014710783613589573,
+    "n_ed_12m": -2.3181723890967437e-05,
+    "n_ip_12m": -8.701470958956866e-06,
+    "n_aki_24m": 0.0006216905778071805,
+    "months_since_nephrology": 0.0006153434442857838,
+    "allowed_12m": 0.0037763449661178208,
+    "rx_sglt2i_active": 0.005376055469646664,
+    "rx_rasi_active": -0.00033139264633641474,
+    "rx_finerenone_active": 0.0,
+    "rx_statin_active": -0.00041940607554813436,
+    "rx_diuretic_active": 0.0006632766284297986,
+    "rx_insulin_active": 0.026347265600522068,
+    "rx_metformin_active": 0.018858882142644307,
+    "rx_nsaid_fills_6m": 0.0007287398309556344,
+    "rx_rasi_pdc_12m": 0.0038876654283003984,
+    "twin_egfr_now": 0.030352510088830165,
+    "twin_slope_yr": 0.009927022184428277,
+    "twin_slope_sd_yr": 0.005563426977327294,
+    "twin_level_sd": 0.027220190212203788,
+    "twin_runway_months": 0.03219006024599621,
+    "twin_p_eskd_24m": 0.16100709493851376,
+    "twin_n_obs": 0.004006320857683561
+  },
+  "fairness_gap": {
+    "selected": 0.08377134617430093,
+    "all": 0.03753146436950405
+  },
+  "signature": "33164e83f3bab048",
+  "summary": "Selected 28 of 58 eligible features (CV PR-AUC 0.527 vs 0.533 with everything). Quarantined for leakage: ['nephro_visits_90d']."
+}

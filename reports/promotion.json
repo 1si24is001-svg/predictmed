@@ -1,0 +1,44 @@
+{
+  "gates": {
+    "passed": true,
+    "detail": {
+      "auprc_lift": {
+        "value": 11.443119449978736,
+        "pass": true
+      },
+      "auroc": {
+        "value": 0.8892748047918461,
+        "pass": true
+      },
+      "calibration_slope": {
+        "value": 1.0155698164366915,
+        "pass": true
+      },
+      "ece": {
+        "value": 0.005843113125022744,
+        "pass": true
+      },
+      "subgroup_auroc_gap": {
+        "value": 0.022176015276341943,
+        "pass": true
+      },
+      "conformal_coverage": {
+        "value": {
+          "events": {
+            "coverage": 0.8385,
+            "n": 161,
+            "wilson_upper95": 0.8806
+          },
+          "non_events": {
+            "coverage": 0.9058,
+            "n": 3377,
+            "wilson_upper95": 0.9138
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "approval": "approved (model_promotion-439b3d8a8a, demo auto-approval)",
+  "approval_id": "model_promotion-439b3d8a8a"
+}

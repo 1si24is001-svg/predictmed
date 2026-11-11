@@ -1,0 +1,1612 @@
+[
+  {
+    "member_id": "M133907",
+    "text": "Member M133907: estimated 12-month deterioration risk 56% (interval 50%\u201362%). Digital twin: kidney runway ~13 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 93%; Kidney runway ~13 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_UACR_TEST, NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9267740163336597,
+        "shap": 1.8006174133986186,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 93%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 12.52971716431211,
+        "shap": 0.7270832436033805,
+        "direction": "raises",
+        "text": "Kidney runway ~13 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.6813954235250187,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_slope_yr",
+        "value": -10.897530317602621,
+        "shap": 0.3024479558210216,
+        "direction": "raises",
+        "text": "Estimated eGFR slope -10.9 mL/min/1.73m\u00b2/yr"
+      }
+    ]
+  },
+  {
+    "member_id": "M114583",
+    "text": "Member M114583: estimated 12-month deterioration risk 83% (interval 86%\u201388%). Digital twin: kidney runway ~29 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 40%; On insulin (advanced diabetes / low eGFR); CKD coded on claims: G4. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.4023325865635269,
+        "shap": 1.5614311694955298,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 40%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.7955955317566797,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "ckd_coded_stage",
+        "value": 5.0,
+        "shap": 0.4238901669726361,
+        "direction": "raises",
+        "text": "CKD coded on claims: G4"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 29.265076765399904,
+        "shap": 0.413712970558777,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~29"
+      }
+    ]
+  },
+  {
+    "member_id": "M106071",
+    "text": "Member M106071: estimated 12-month deterioration risk 44% (interval 38%\u201342%). Digital twin: kidney runway ~21 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 61%; On insulin (advanced diabetes / low eGFR); Estimated eGFR slope -7.7 mL/min/1.73m\u00b2/yr. Open care gaps: NO_UACR_TEST, NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.6080924118625605,
+        "shap": 1.530237077472392,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 61%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.786989409300092,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_slope_yr",
+        "value": -7.670433582785656,
+        "shap": 0.3473989589988488,
+        "direction": "raises",
+        "text": "Estimated eGFR slope -7.7 mL/min/1.73m\u00b2/yr"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 28.385616169310808,
+        "shap": 0.2995633153802142,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~28"
+      }
+    ]
+  },
+  {
+    "member_id": "M124198",
+    "text": "Member M124198: estimated 12-month deterioration risk 77% (interval 86%\u201388%). Digital twin: kidney runway ~3 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 89%; Kidney runway ~3 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.8921397444316959,
+        "shap": 1.8328434584870221,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 89%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 2.756569787511372,
+        "shap": 0.9795464645385273,
+        "direction": "raises",
+        "text": "Kidney runway ~3 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.538137863758887,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 16.657189877482462,
+        "shap": 0.45913658287430875,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~17"
+      }
+    ]
+  },
+  {
+    "member_id": "M146406",
+    "text": "Member M146406: estimated 12-month deterioration risk 64% (interval 56%\u201371%). Digital twin: kidney runway ~8 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 96%; Kidney runway ~8 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY, UNDIAGNOSED_CKD. Suggested discussion points for the care team: Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP. Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9588226537249918,
+        "shap": 2.1736767929407237,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 96%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 7.701213076450535,
+        "shap": 0.8124303491641849,
+        "direction": "raises",
+        "text": "Kidney runway ~8 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.6628413516344925,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "rx_metformin_active",
+        "value": 0.0,
+        "shap": 0.26675829189115235,
+        "direction": "raises",
+        "text": "Not on metformin"
+      }
+    ]
+  },
+  {
+    "member_id": "M139259",
+    "text": "Member M139259: estimated 12-month deterioration risk 97% (interval 93%\u2013100%). Digital twin: kidney runway ~3 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 95%; CKD coded on claims: G5/ESKD; Kidney runway ~3 months at current trajectory. Open care gaps: NO_EGFR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY. Suggested discussion points for the care team: Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9502358882162992,
+        "shap": 2.3034270190067923,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 95%"
+      },
+      {
+        "feature": "ckd_coded_stage",
+        "value": 6.0,
+        "shap": 1.5366996896457086,
+        "direction": "raises",
+        "text": "CKD coded on claims: G5/ESKD"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 2.6196860483134756,
+        "shap": 1.0777571353075397,
+        "direction": "raises",
+        "text": "Kidney runway ~3 months at current trajectory"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 16.624781742446313,
+        "shap": 0.5792070482172126,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~17"
+      }
+    ]
+  },
+  {
+    "member_id": "M110687",
+    "text": "Member M110687: estimated 12-month deterioration risk 88% (interval 88%\u201394%). Digital twin: current eGFR estimate is at or below 15 \u2014 urgent nephrology pathway. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 99%; Twin eGFR estimate already at or below 15; Denoised current eGFR ~13. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9863222434295307,
+        "shap": 2.2366475390529934,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 99%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 0.0,
+        "shap": 1.0500092009155944,
+        "direction": "raises",
+        "text": "Twin eGFR estimate already at or below 15"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 12.604976075179348,
+        "shap": 0.7773135073654462,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~13"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5244286743544773,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M133360",
+    "text": "Member M133360: estimated 12-month deterioration risk 64% (interval 56%\u201370%). Digital twin: kidney runway ~7 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 92%; Kidney runway ~7 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9221051711233805,
+        "shap": 1.9183265321908545,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 92%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 6.6637840378989806,
+        "shap": 0.8123601949122442,
+        "direction": "raises",
+        "text": "Kidney runway ~7 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.6684739421180693,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 19.13242113444782,
+        "shap": 0.36348046097825204,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~19"
+      }
+    ]
+  },
+  {
+    "member_id": "M136025",
+    "text": "Member M136025: estimated 12-month deterioration risk 66% (interval 58%\u201371%). Digital twin: kidney runway ~23 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 53%; On insulin (advanced diabetes / low eGFR); Denoised current eGFR ~31. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.5275473210929915,
+        "shap": 1.4672381260972394,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 53%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 1.004075586217022,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 31.135469713420676,
+        "shap": 0.5611549073615867,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~31"
+      },
+      {
+        "feature": "dx_diabetes",
+        "value": 1.0,
+        "shap": 0.3038140592207443,
+        "direction": "raises",
+        "text": "Diabetes"
+      }
+    ]
+  },
+  {
+    "member_id": "M109162",
+    "text": "Member M109162: estimated 12-month deterioration risk 82% (interval 86%\u201388%). Digital twin: current eGFR estimate is at or below 15 \u2014 urgent nephrology pathway. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 99%; Twin eGFR estimate already at or below 15; Denoised current eGFR ~12. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9913483024785397,
+        "shap": 2.3624834314102245,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 99%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 0.0,
+        "shap": 1.0630004225372987,
+        "direction": "raises",
+        "text": "Twin eGFR estimate already at or below 15"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 11.88388516124821,
+        "shap": 0.8632669881177427,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~12"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5934585982731669,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M140874",
+    "text": "Member M140874: estimated 12-month deterioration risk 32% (interval 31%\u201338%). Digital twin: kidney runway ~25 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 48%; On insulin (advanced diabetes / low eGFR); Kidney runway ~25 months at current trajectory. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NO_NEPHROLOGY. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.4768734141109038,
+        "shap": 1.3669491038703676,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 48%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.854899059489667,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 25.442377657155262,
+        "shap": 0.3155823013204511,
+        "direction": "raises",
+        "text": "Kidney runway ~25 months at current trajectory"
+      },
+      {
+        "feature": "rx_metformin_active",
+        "value": 0.0,
+        "shap": 0.27392184908612527,
+        "direction": "raises",
+        "text": "Not on metformin"
+      }
+    ]
+  },
+  {
+    "member_id": "M143450",
+    "text": "Member M143450: estimated 12-month deterioration risk 56% (interval 50%\u201362%). Digital twin: kidney runway ~16 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 86%; On insulin (advanced diabetes / low eGFR); Estimated eGFR slope -8.9 mL/min/1.73m\u00b2/yr. Open care gaps: NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.8611477209471535,
+        "shap": 1.7597325066705178,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 86%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5929996572025721,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_slope_yr",
+        "value": -8.879203973200331,
+        "shap": 0.3836822810300831,
+        "direction": "raises",
+        "text": "Estimated eGFR slope -8.9 mL/min/1.73m\u00b2/yr"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 15.55280352584828,
+        "shap": 0.29946939297007097,
+        "direction": "raises",
+        "text": "Kidney runway ~16 months at current trajectory"
+      }
+    ]
+  },
+  {
+    "member_id": "M105437",
+    "text": "Member M105437: estimated 12-month deterioration risk 48% (interval 38%\u201342%). Digital twin: kidney runway ~16 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 81%; On insulin (advanced diabetes / low eGFR); Kidney runway ~16 months at current trajectory. Open care gaps: NO_UACR_TEST, NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP. Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.8101096257639611,
+        "shap": 1.6193943546292526,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 81%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.7426868034194646,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 16.170816737859152,
+        "shap": 0.35071850578689123,
+        "direction": "raises",
+        "text": "Kidney runway ~16 months at current trajectory"
+      },
+      {
+        "feature": "twin_slope_yr",
+        "value": -9.526305463965729,
+        "shap": 0.31005668997115293,
+        "direction": "raises",
+        "text": "Estimated eGFR slope -9.5 mL/min/1.73m\u00b2/yr"
+      }
+    ]
+  },
+  {
+    "member_id": "M142816",
+    "text": "Member M142816: estimated 12-month deterioration risk 75% (interval 86%\u201388%). Digital twin: kidney runway ~6 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 95%; Kidney runway ~6 months at current trajectory; Denoised current eGFR ~18. Open care gaps: NO_UACR_TEST, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9465143625061481,
+        "shap": 1.959654358405082,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 95%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 5.60155364896358,
+        "shap": 1.0397687757559408,
+        "direction": "raises",
+        "text": "Kidney runway ~6 months at current trajectory"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 17.795592681083207,
+        "shap": 0.6263327619757219,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~18"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.48144764821138764,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M133763",
+    "text": "Member M133763: estimated 12-month deterioration risk 68% (interval 67%\u201371%). Digital twin: kidney runway ~3 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 93%; Kidney runway ~3 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9339410777436856,
+        "shap": 1.8990338751488698,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 93%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 3.057300790102509,
+        "shap": 0.9573968929051061,
+        "direction": "raises",
+        "text": "Kidney runway ~3 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.6163148624140385,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 17.162317784960344,
+        "shap": 0.5087102977581276,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~17"
+      }
+    ]
+  },
+  {
+    "member_id": "M124666",
+    "text": "Member M124666: estimated 12-month deterioration risk 68% (interval 67%\u201371%). Digital twin: current eGFR estimate is at or below 15 \u2014 urgent nephrology pathway. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 94%; Twin eGFR estimate already at or below 15; Denoised current eGFR ~12. Open care gaps: NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9374097782137132,
+        "shap": 1.8643841884223245,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 94%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 0.0,
+        "shap": 0.997069045909979,
+        "direction": "raises",
+        "text": "Twin eGFR estimate already at or below 15"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 11.8917532075449,
+        "shap": 0.781074926093528,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~12"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5201256920447495,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M121634",
+    "text": "Member M121634: estimated 12-month deterioration risk 50% (interval 38%\u201342%). Digital twin: kidney runway ~15 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 73%; On insulin (advanced diabetes / low eGFR); CKD coded on claims: G4. Open care gaps: NO_UACR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.731047438999275,
+        "shap": 1.5011331802183074,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 73%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.6895881709987187,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "ckd_coded_stage",
+        "value": 5.0,
+        "shap": 0.3913273438670454,
+        "direction": "raises",
+        "text": "CKD coded on claims: G4"
+      },
+      {
+        "feature": "twin_slope_yr",
+        "value": -7.485755624992542,
+        "shap": 0.3392090496315471,
+        "direction": "raises",
+        "text": "Estimated eGFR slope -7.5 mL/min/1.73m\u00b2/yr"
+      }
+    ]
+  },
+  {
+    "member_id": "M106535",
+    "text": "Member M106535: estimated 12-month deterioration risk 92% (interval 90%\u2013100%). Digital twin: current eGFR estimate is at or below 15 \u2014 urgent nephrology pathway. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 97%; CKD coded on claims: G5/ESKD; Twin eGFR estimate already at or below 15. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9739366062162668,
+        "shap": 2.0853915581269598,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 97%"
+      },
+      {
+        "feature": "ckd_coded_stage",
+        "value": 6.0,
+        "shap": 1.6447498279869395,
+        "direction": "raises",
+        "text": "CKD coded on claims: G5/ESKD"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 0.0,
+        "shap": 1.0061395360813572,
+        "direction": "raises",
+        "text": "Twin eGFR estimate already at or below 15"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5479502906264401,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M124611",
+    "text": "Member M124611: estimated 12-month deterioration risk 72% (interval 68%\u201375%). Digital twin: kidney runway ~6 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 99%; Kidney runway ~6 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_UACR_TEST, NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9872152424220674,
+        "shap": 2.204732013663075,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 99%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 6.006017422148554,
+        "shap": 0.8753055911156571,
+        "direction": "raises",
+        "text": "Kidney runway ~6 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.6091061103903026,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_slope_yr",
+        "value": -10.085782004074817,
+        "shap": 0.281023408977722,
+        "direction": "raises",
+        "text": "Estimated eGFR slope -10.1 mL/min/1.73m\u00b2/yr"
+      }
+    ]
+  },
+  {
+    "member_id": "M148260",
+    "text": "Member M148260: estimated 12-month deterioration risk 79% (interval 86%\u201388%). Digital twin: kidney runway ~2 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 96%; Kidney runway ~2 months at current trajectory; Denoised current eGFR ~16. Open care gaps: NO_UACR_TEST, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9638683229552524,
+        "shap": 2.3153748835952217,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 96%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 1.6025479213461782,
+        "shap": 1.1421613857871034,
+        "direction": "raises",
+        "text": "Kidney runway ~2 months at current trajectory"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 15.821354542409244,
+        "shap": 0.6383871892395595,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~16"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5711975766632407,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M147731",
+    "text": "Member M147731: estimated 12-month deterioration risk 88% (interval 88%\u201394%). Digital twin: kidney runway ~3 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 72%; CKD coded on claims: G5/ESKD; Kidney runway ~3 months at current trajectory. Open care gaps: NO_UACR_TEST, NO_EGFR_TEST, NO_SGLT2I, NO_NEPHROLOGY. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.7181321919172089,
+        "shap": 1.4980882625760805,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 72%"
+      },
+      {
+        "feature": "ckd_coded_stage",
+        "value": 6.0,
+        "shap": 1.4839171677018475,
+        "direction": "raises",
+        "text": "CKD coded on claims: G5/ESKD"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 2.709707610994808,
+        "shap": 0.8639996965598641,
+        "direction": "raises",
+        "text": "Kidney runway ~3 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5709920607782923,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M108925",
+    "text": "Member M108925: estimated 12-month deterioration risk 90% (interval 88%\u201394%). Digital twin: current eGFR estimate is at or below 15 \u2014 urgent nephrology pathway. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 99%; Twin eGFR estimate already at or below 15; Denoised current eGFR ~16. Open care gaps: NO_EGFR_TEST, NO_SGLT2I, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order serum creatinine / eGFR; Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_EGFR_TEST",
+        "action": "Order serum creatinine / eGFR",
+        "evidence": "Diagnostic gap: enables monitoring, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9891691626230631,
+        "shap": 2.176538542333561,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 99%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 0.8666523094055586,
+        "shap": 1.022543625223064,
+        "direction": "raises",
+        "text": "Twin eGFR estimate already at or below 15"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 15.7968589081978,
+        "shap": 0.5199342246576636,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~16"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.502405542980793,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      }
+    ]
+  },
+  {
+    "member_id": "M142405",
+    "text": "Member M142405: estimated 12-month deterioration risk 38% (interval 36%\u201341%). Digital twin: kidney runway ~31 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 31%; On insulin (advanced diabetes / low eGFR); Denoised current eGFR ~31. Open care gaps: NO_UACR_TEST, NO_SGLT2I, NSAID_EXPOSURE, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Pharmacist review of chronic NSAID use; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NSAID_EXPOSURE",
+        "action": "Pharmacist review of chronic NSAID use",
+        "evidence": "Observational nephrotoxicity evidence; expert prior",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.3126835845889814,
+        "shap": 1.3578508333048147,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 31%"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.9056507129608669,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 30.640540433300124,
+        "shap": 0.5022222487819721,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~31"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 30.802155958010356,
+        "shap": 0.2580335949945464,
+        "direction": "raises",
+        "text": "Kidney runway ~31 months at current trajectory"
+      }
+    ]
+  },
+  {
+    "member_id": "M105865",
+    "text": "Member M105865: estimated 12-month deterioration risk 80% (interval 86%\u201388%). Digital twin: kidney runway ~6 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 96%; Kidney runway ~6 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_SGLT2I, NO_NEPHROLOGY, NO_STATIN. Suggested discussion points for the care team: Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.9562627034050135,
+        "shap": 2.2592951733501625,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 96%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 5.885718976080853,
+        "shap": 0.8220784359034007,
+        "direction": "raises",
+        "text": "Kidney runway ~6 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5777647682200117,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 18.61939015211598,
+        "shap": 0.38999572501759844,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~19"
+      }
+    ]
+  },
+  {
+    "member_id": "M110770",
+    "text": "Member M110770: estimated 12-month deterioration risk 43% (interval 36%\u201341%). Digital twin: kidney runway ~10 months. Model drivers: Digital twin projects eGFR<15 within 24 months with probability 77%; Kidney runway ~10 months at current trajectory; On insulin (advanced diabetes / low eGFR). Open care gaps: NO_UACR_TEST, NO_SGLT2I, NO_NEPHROLOGY, UNDIAGNOSED_CKD, NO_STATIN. Suggested discussion points for the care team: Order urine albumin-creatinine ratio (annual for DM/CKD); Discuss SGLT2 inhibitor eligibility with prescriber; Nephrology referral (eGFR<30, ACR>300 or rapid decline); Confirm and code CKD; notify PCP; Statin review (age>=50, eGFR<60). Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "narrator": "template",
+    "actions": [
+      {
+        "gap": "NO_UACR_TEST",
+        "action": "Order urine albumin-creatinine ratio (annual for DM/CKD)",
+        "evidence": "Diagnostic gap: enables staging, no direct effect assumed",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_SGLT2I",
+        "action": "Discuss SGLT2 inhibitor eligibility with prescriber",
+        "evidence": "SMART-C meta-analysis of 13 SGLT2i trials (Lancet 2022): kidney progression RR 0.63",
+        "evidence_level": "high"
+      },
+      {
+        "gap": "NO_NEPHROLOGY",
+        "action": "Nephrology referral (eGFR<30, ACR>300 or rapid decline)",
+        "evidence": "Reduces unplanned (crash) dialysis start; progression effect not assumed",
+        "evidence_level": "low"
+      },
+      {
+        "gap": "UNDIAGNOSED_CKD",
+        "action": "Confirm and code CKD; notify PCP",
+        "evidence": "Awareness gap (~87% of US adults with CKD unaware, CDC 2023)",
+        "evidence_level": "n/a"
+      },
+      {
+        "gap": "NO_STATIN",
+        "action": "Statin review (age>=50, eGFR<60)",
+        "evidence": "Cardiovascular benefit; no kidney-progression effect assumed",
+        "evidence_level": "high"
+      }
+    ],
+    "disclaimer": "Research estimate for care-management prioritisation; not a diagnosis or treatment recommendation.",
+    "reasons": [
+      {
+        "feature": "twin_p_eskd_24m",
+        "value": 0.7661550681332261,
+        "shap": 1.6072762630140902,
+        "direction": "raises",
+        "text": "Digital twin projects eGFR<15 within 24 months with probability 77%"
+      },
+      {
+        "feature": "twin_runway_months",
+        "value": 9.723032309120876,
+        "shap": 0.678934644429725,
+        "direction": "raises",
+        "text": "Kidney runway ~10 months at current trajectory"
+      },
+      {
+        "feature": "rx_insulin_active",
+        "value": 1.0,
+        "shap": 0.5443983012339448,
+        "direction": "raises",
+        "text": "On insulin (advanced diabetes / low eGFR)"
+      },
+      {
+        "feature": "twin_egfr_now",
+        "value": 19.10045452882454,
+        "shap": 0.34413943189650525,
+        "direction": "raises",
+        "text": "Denoised current eGFR ~19"
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "source": "predictmed.simulator",
+  "seed": 20261029,
+  "config_sha": "7ccdaeb5d2d7",
+  "generated_at": "2026-10-29T14:52:40Z",
+  "tables": {
+    "silver.members": {
+      "rows": 50000,
+      "dropped": 0,
+      "snapshot_id": 5157637339328034594
+    },
+    "silver.enrollment": {
+      "rows": 50000,
+      "dropped": 0,
+      "snapshot_id": 5943507170812329075
+    },
+    "silver.labs": {
+      "rows": 1674286,
+      "dropped": 0,
+      "snapshot_id": 1405832612461074975
+    },
+    "silver.claims": {
+      "rows": 885532,
+      "dropped": 0,
+      "snapshot_id": 3127662726310854737
+    },
+    "silver.rx_fills": {
+      "rows": 3317136,
+      "dropped": 0,
+      "snapshot_id": 5787964343261225735
+    },
+    "silver.life_events": {
+      "rows": 29451,
+      "dropped": 0,
+      "snapshot_id": 631375498596023138
+    },
+    "gold.patient_timeline": {
+      "rows": 5876954,
+      "snapshot_id": 8210298131290209214
+    }
+  },
+  "bronze_snapshots": {
+    "members": 3,
+    "enrollment": 3,
+    "labs": 15,
+    "claims": 15,
+    "rx_fills": 15,
+    "life_events": 3
+  },
+  "data_audit": {
+    "rows": {
+      "members": 50000,
+      "enrollment": 50000,
+      "labs": 1674286,
+      "claims": 885532,
+      "rx_fills": 3317136,
+      "life_events": 29451
+    },
+    "implausible_lab_values": {
+      "egfr": 0,
+      "creatinine": 0,
+      "uacr": 0,
+      "hba1c": 0,
+      "potassium": 0,
+      "hemoglobin": 0,
+      "bicarbonate": 0,
+      "sbp": 0
+    },
+    "duplicate_claim_ids": 0,
+    "labs_missing_member": 0
+  }
+}

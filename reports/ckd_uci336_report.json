@@ -1,0 +1,545 @@
+{
+  "data": {
+    "source": "UCI Machine Learning Repository, Chronic Kidney Disease (id 336)",
+    "url": "https://archive.ics.uci.edu/dataset/336/chronic+kidney+disease",
+    "licence": "CC BY 4.0",
+    "sha256": "b2a110ee4fe787629ab726d427fc91783f6e42857bf75a646810bceb5989ee10",
+    "rows": 400,
+    "columns": 25
+  },
+  "dictionary": {
+    "age": "age (years)",
+    "bp": "diastolic blood pressure (mm Hg)",
+    "sg": "urine specific gravity",
+    "al": "urine albumin (0-5)",
+    "su": "urine sugar (0-5)",
+    "rbc": "urine red blood cells",
+    "pc": "pus cells",
+    "pcc": "pus cell clumps",
+    "ba": "bacteria",
+    "bgr": "blood glucose random (mg/dL)",
+    "bu": "blood urea (mg/dL)",
+    "sc": "serum creatinine (mg/dL)",
+    "sod": "sodium (mEq/L)",
+    "pot": "potassium (mEq/L)",
+    "hemo": "hemoglobin (g/dL)",
+    "pcv": "packed cell volume (%)",
+    "wbcc": "white blood cell count (cells/uL)",
+    "rbcc": "red blood cell count (M/uL)",
+    "htn": "hypertension",
+    "dm": "diabetes mellitus",
+    "cad": "coronary artery disease",
+    "appet": "appetite",
+    "pe": "pedal edema",
+    "ane": "anemia",
+    "class": "target: ckd / notckd"
+  },
+  "audit": {
+    "dirty_tokens_fixed": {
+      "dm": 1,
+      "class": 2
+    },
+    "implausible_set_to_missing": {
+      "sod": 1,
+      "pot": 2
+    },
+    "label_values_after_cleaning": {
+      "ckd": 250,
+      "notckd": 150
+    },
+    "rows_dropped_invalid_label": 0,
+    "exact_duplicate_rows": 0,
+    "missing_pct": {
+      "rbc": 38.0,
+      "rbcc": 32.8,
+      "wbcc": 26.5,
+      "pot": 22.5,
+      "sod": 22.0,
+      "pcv": 17.8,
+      "pc": 16.2,
+      "hemo": 13.0,
+      "su": 12.2,
+      "sg": 11.8,
+      "al": 11.5,
+      "bgr": 11.0,
+      "bu": 4.8,
+      "sc": 4.2,
+      "bp": 3.0,
+      "age": 2.2,
+      "pcc": 1.0,
+      "ba": 1.0,
+      "htn": 0.5,
+      "dm": 0.5,
+      "cad": 0.5,
+      "appet": 0.2,
+      "pe": 0.2,
+      "ane": 0.2,
+      "y": 0.0
+    },
+    "prevalence": 0.625,
+    "n": 400,
+    "univariate_auroc": {
+      "hemo": 0.967,
+      "pcv": 0.952,
+      "sc": 0.922,
+      "sg": 0.888,
+      "rbcc": 0.856,
+      "al": 0.81,
+      "htn": 0.794,
+      "sod": 0.778,
+      "dm": 0.774,
+      "bu": 0.744,
+      "bgr": 0.737,
+      "bp": 0.667,
+      "age": 0.665,
+      "appet": 0.664,
+      "pc": 0.652,
+      "pe": 0.652,
+      "su": 0.622,
+      "ane": 0.62,
+      "wbcc": 0.595,
+      "rbc": 0.594,
+      "pcc": 0.584,
+      "cad": 0.568,
+      "ba": 0.544,
+      "pot": 0.513
+    },
+    "class_means": {
+      "notckd": {
+        "age": 46.52,
+        "bp": 71.35,
+        "sg": 1.02,
+        "al": 0.0,
+        "su": 0.0,
+        "bgr": 107.72,
+        "bu": 32.8,
+        "sc": 0.87,
+        "sod": 141.73,
+        "pot": 4.34,
+        "hemo": 15.19,
+        "pcv": 46.34,
+        "wbcc": 7705.59,
+        "rbcc": 5.38
+      },
+      "ckd": {
+        "age": 54.54,
+        "bp": 79.62,
+        "sg": 1.01,
+        "al": 1.72,
+        "su": 0.77,
+        "bgr": 175.42,
+        "bu": 72.39,
+        "sc": 4.41,
+        "sod": 134.68,
+        "pot": 4.42,
+        "hemo": 10.65,
+        "pcv": 32.94,
+        "wbcc": 9069.54,
+        "rbcc": 3.95
+      }
+    },
+    "notes": [
+      "Sex is not recorded, so eGFR (CKD-EPI 2021) cannot be computed; serum creatinine is used directly.",
+      "No patient identifier: rows are treated as independent patients.",
+      "Missingness is handled inside each model pipeline (fit on training folds only)."
+    ]
+  },
+  "all_features": {
+    "feature_set": "all features (diagnostic markers included)",
+    "features": [
+      "age",
+      "bp",
+      "sg",
+      "al",
+      "su",
+      "bgr",
+      "bu",
+      "sc",
+      "sod",
+      "pot",
+      "hemo",
+      "pcv",
+      "wbcc",
+      "rbcc",
+      "rbc",
+      "pc",
+      "pcc",
+      "ba",
+      "htn",
+      "dm",
+      "cad",
+      "appet",
+      "pe",
+      "ane"
+    ],
+    "cv": {
+      "prevalence": {
+        "auroc": {
+          "mean": 0.5,
+          "p2.5": 0.5,
+          "p97.5": 0.5
+        },
+        "auprc": {
+          "mean": 0.625,
+          "p2.5": 0.625,
+          "p97.5": 0.625
+        },
+        "brier": {
+          "mean": 0.234375,
+          "p2.5": 0.234375,
+          "p97.5": 0.234375
+        },
+        "sensitivity": {
+          "mean": 1.0,
+          "p2.5": 1.0,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.0,
+          "p2.5": 0.0,
+          "p97.5": 0.0
+        }
+      },
+      "logistic": {
+        "auroc": {
+          "mean": 0.9997866666666667,
+          "p2.5": 0.9986666666666667,
+          "p97.5": 1.0
+        },
+        "auprc": {
+          "mean": 0.9998744856711914,
+          "p2.5": 0.9992078431372549,
+          "p97.5": 1.0
+        },
+        "brier": {
+          "mean": 0.0094530709938387,
+          "p2.5": 0.0019677493926568844,
+          "p97.5": 0.02112027851703804
+        },
+        "sensitivity": {
+          "mean": 0.9944000000000002,
+          "p2.5": 0.972,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.9813333333333334,
+          "p2.5": 0.92,
+          "p97.5": 1.0
+        }
+      },
+      "random_forest": {
+        "auroc": {
+          "mean": 0.9995466666666667,
+          "p2.5": 0.9966666666666667,
+          "p97.5": 1.0
+        },
+        "auprc": {
+          "mean": 0.9997324470269967,
+          "p2.5": 0.9980525422012057,
+          "p97.5": 1.0000000000000002
+        },
+        "brier": {
+          "mean": 0.012936303137172776,
+          "p2.5": 0.005829474522990851,
+          "p97.5": 0.026746806157982722
+        },
+        "sensitivity": {
+          "mean": 1.0,
+          "p2.5": 1.0,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.9760000000000001,
+          "p2.5": 0.9,
+          "p97.5": 1.0
+        }
+      },
+      "lightgbm": {
+        "auroc": {
+          "mean": 0.9998933333333333,
+          "p2.5": 0.9988,
+          "p97.5": 1.0
+        },
+        "auprc": {
+          "mean": 0.9999390307066223,
+          "p2.5": 0.9993118756936737,
+          "p97.5": 1.0000000000000002
+        },
+        "brier": {
+          "mean": 0.0012154494856663246,
+          "p2.5": 1.0696330449787664e-06,
+          "p97.5": 0.010617403303562697
+        },
+        "sensitivity": {
+          "mean": 0.9976,
+          "p2.5": 0.98,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 1.0,
+          "p2.5": 1.0,
+          "p97.5": 1.0
+        }
+      }
+    },
+    "holdout": {
+      "prevalence": {
+        "auroc": 0.5,
+        "auprc": 0.63,
+        "brier": 0.23314444444444452,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "ppv": 0.63,
+        "tp": 63,
+        "fp": 37,
+        "fn": 0,
+        "tn": 0
+      },
+      "logistic": {
+        "auroc": 1.0,
+        "auprc": 0.9999999999999998,
+        "brier": 0.010842633782049336,
+        "sensitivity": 1.0,
+        "specificity": 0.9459459459459459,
+        "ppv": 0.9692307692307692,
+        "tp": 63,
+        "fp": 2,
+        "fn": 0,
+        "tn": 35
+      },
+      "random_forest": {
+        "auroc": 0.9995709995709996,
+        "auprc": 0.9997519841269841,
+        "brier": 0.01746576557326506,
+        "sensitivity": 1.0,
+        "specificity": 0.972972972972973,
+        "ppv": 0.984375,
+        "tp": 63,
+        "fp": 1,
+        "fn": 0,
+        "tn": 36
+      },
+      "lightgbm": {
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "brier": 0.000146337159736861,
+        "sensitivity": 1.0,
+        "specificity": 1.0,
+        "ppv": 1.0,
+        "tp": 63,
+        "fp": 0,
+        "fn": 0,
+        "tn": 37
+      }
+    },
+    "rf_importance_top10": {
+      "hemo": 0.1937,
+      "pcv": 0.1466,
+      "sc": 0.1151,
+      "sg": 0.0947,
+      "rbcc": 0.0732,
+      "al": 0.0571,
+      "htn": 0.0472,
+      "missingindicator_rbc": 0.0429,
+      "dm": 0.0362,
+      "bu": 0.0261
+    }
+  },
+  "non_renal": {
+    "feature_set": "non-renal routine data only (kidney markers removed)",
+    "features": [
+      "age",
+      "bp",
+      "bgr",
+      "sod",
+      "pot",
+      "hemo",
+      "pcv",
+      "wbcc",
+      "rbcc",
+      "htn",
+      "dm",
+      "cad",
+      "appet",
+      "pe",
+      "ane"
+    ],
+    "cv": {
+      "prevalence": {
+        "auroc": {
+          "mean": 0.5,
+          "p2.5": 0.5,
+          "p97.5": 0.5
+        },
+        "auprc": {
+          "mean": 0.625,
+          "p2.5": 0.625,
+          "p97.5": 0.625
+        },
+        "brier": {
+          "mean": 0.234375,
+          "p2.5": 0.234375,
+          "p97.5": 0.234375
+        },
+        "sensitivity": {
+          "mean": 1.0,
+          "p2.5": 1.0,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.0,
+          "p2.5": 0.0,
+          "p97.5": 0.0
+        }
+      },
+      "logistic": {
+        "auroc": {
+          "mean": 0.9935999999999998,
+          "p2.5": 0.9789333333333334,
+          "p97.5": 1.0
+        },
+        "auprc": {
+          "mean": 0.9965366054948832,
+          "p2.5": 0.9894793971002488,
+          "p97.5": 1.0
+        },
+        "brier": {
+          "mean": 0.02766214969306286,
+          "p2.5": 0.00855705022497173,
+          "p97.5": 0.05128939275018463
+        },
+        "sensitivity": {
+          "mean": 0.9712000000000001,
+          "p2.5": 0.9319999999999999,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.9573333333333334,
+          "p2.5": 0.9,
+          "p97.5": 1.0
+        }
+      },
+      "random_forest": {
+        "auroc": {
+          "mean": 0.99256,
+          "p2.5": 0.9733333333333334,
+          "p97.5": 1.0
+        },
+        "auprc": {
+          "mean": 0.9957967022635315,
+          "p2.5": 0.9830748011719794,
+          "p97.5": 1.0000000000000002
+        },
+        "brier": {
+          "mean": 0.02683672841415963,
+          "p2.5": 0.011455761004365886,
+          "p97.5": 0.05052974997342006
+        },
+        "sensitivity": {
+          "mean": 0.9815999999999999,
+          "p2.5": 0.952,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.9653333333333333,
+          "p2.5": 0.9,
+          "p97.5": 1.0
+        }
+      },
+      "lightgbm": {
+        "auroc": {
+          "mean": 0.9946933333333334,
+          "p2.5": 0.9845333333333333,
+          "p97.5": 1.0
+        },
+        "auprc": {
+          "mean": 0.9971713074164847,
+          "p2.5": 0.9918170784857704,
+          "p97.5": 1.0
+        },
+        "brier": {
+          "mean": 0.02176093854744671,
+          "p2.5": 0.0003203995010999832,
+          "p97.5": 0.05409296625283689
+        },
+        "sensitivity": {
+          "mean": 0.9815999999999999,
+          "p2.5": 0.96,
+          "p97.5": 1.0
+        },
+        "specificity": {
+          "mean": 0.9653333333333333,
+          "p2.5": 0.9,
+          "p97.5": 1.0
+        }
+      }
+    },
+    "holdout": {
+      "prevalence": {
+        "auroc": 0.5,
+        "auprc": 0.63,
+        "brier": 0.23314444444444452,
+        "sensitivity": 1.0,
+        "specificity": 0.0,
+        "ppv": 0.63,
+        "tp": 63,
+        "fp": 37,
+        "fn": 0,
+        "tn": 0
+      },
+      "logistic": {
+        "auroc": 0.9935649935649935,
+        "auprc": 0.9964464364566823,
+        "brier": 0.037930508299658536,
+        "sensitivity": 0.9682539682539683,
+        "specificity": 0.8918918918918919,
+        "ppv": 0.9384615384615385,
+        "tp": 61,
+        "fp": 4,
+        "fn": 2,
+        "tn": 33
+      },
+      "random_forest": {
+        "auroc": 0.9914199914199914,
+        "auprc": 0.9944905307155711,
+        "brier": 0.0322302023231042,
+        "sensitivity": 1.0,
+        "specificity": 0.918918918918919,
+        "ppv": 0.9545454545454546,
+        "tp": 63,
+        "fp": 3,
+        "fn": 0,
+        "tn": 34
+      },
+      "lightgbm": {
+        "auroc": 0.996996996996997,
+        "auprc": 0.9982898821608497,
+        "brier": 0.0336218333660047,
+        "sensitivity": 1.0,
+        "specificity": 0.8918918918918919,
+        "ppv": 0.9402985074626866,
+        "tp": 63,
+        "fp": 4,
+        "fn": 0,
+        "tn": 33
+      }
+    },
+    "rf_importance_top10": {
+      "hemo": 0.2684,
+      "pcv": 0.2249,
+      "rbcc": 0.1027,
+      "htn": 0.0759,
+      "dm": 0.0622,
+      "sod": 0.0459,
+      "missingindicator_rbcc": 0.0438,
+      "bgr": 0.043,
+      "missingindicator_sod": 0.0201,
+      "bp": 0.0199
+    }
+  },
+  "interpretation": [
+    "With kidney markers the label is almost deterministic (creatinine, albumin and specific gravity define the diagnosis), so ~0.99+ AUROC reflects label construction, not clinical foresight.",
+    "Without kidney markers, routine data (hemoglobin, PCV, hypertension, diabetes, appetite, oedema) still separate CKD well; this is the payer use case of flagging likely-undiagnosed CKD for testing.",
+    "Neither result is a deterioration (progression) model: that needs longitudinal labs, which is why PredictMed's main track uses the time-series payer cohort and the digital twin."
+  ]
+}

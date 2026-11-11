@@ -1,0 +1,43 @@
+{
+  "members_replayed": 250,
+  "events_replayed": 28319,
+  "injected_duplicates": 846,
+  "injected_malformed": 75,
+  "produced": 28819,
+  "valid": 27398,
+  "duplicates_suppressed": 1346,
+  "dlq": 75,
+  "dlq_by_reason": {
+    "UNIT_MISMATCH": 31,
+    "IMPLAUSIBLE_VALUE": 27,
+    "ENVELOPE_MISSING_FIELD": 17
+  },
+  "score_requests": 250,
+  "scored": 250,
+  "retries": 4,
+  "results_persisted": 250,
+  "result_duplicates_suppressed": 250,
+  "parity_max_abs_diff": 0.0,
+  "parity_rows": 250,
+  "parity_pass": true,
+  "twin_parity_max_abs_diff": 0.0,
+  "quality_status_counts": {
+    "valid": 250
+  },
+  "latency_ms_p50": 1702.8799057006836,
+  "latency_ms_p95": 2940.4616236686707,
+  "throughput_events_per_s": 801.2384084804828,
+  "dlq_rows": 75,
+  "topic_sizes": {
+    "clinical.observation.v1": 8194,
+    "clinical.encounter.v1": 0,
+    "clinical.medication.v1": 16793,
+    "claims.claim.v1": 3573,
+    "features.snapshot.v1": 250,
+    "risk.score.request.v1": 250,
+    "risk.score.result.v1": 250,
+    "data.quality.dlq.v1": 75,
+    "agent.action.v1": 0,
+    "member.enrollment.v1": 259
+  }
+}

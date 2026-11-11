@@ -1,0 +1,11 @@
+{
+  "n": 6283,
+  "slope_mae_twin": 2.2402996331943275,
+  "slope_mae_ols_where_available": 7.13370323184157,
+  "slope_mae_twin_same_rows": 2.1579065681076233,
+  "ols_slope_unavailable_share": 0.3988540506127646,
+  "level_mae_twin": 5.0471016963481325,
+  "level_mae_last_lab": 5.577084195448034,
+  "rapid_detection_auroc_twin_p_rapid": 0.7947378171934691,
+  "rapid_detection_auroc_ols": 0.6661040952025572
+}

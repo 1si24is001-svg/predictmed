@@ -1,0 +1,53 @@
+{
+  "2pct": {
+    "risk_only": {
+      "k": 125,
+      "events_captured": 104,
+      "expected_preventable_events": 9.404,
+      "members_with_actionable_gap": 46,
+      "eac_usd": 427639.83633723843
+    },
+    "eac": {
+      "k": 125,
+      "events_captured": 61,
+      "expected_preventable_events": 18.213000000000005,
+      "members_with_actionable_gap": 106,
+      "eac_usd": 1166754.6481479893
+    },
+    "relative_gain_preventable": 0.9367290514674611
+  },
+  "5pct": {
+    "risk_only": {
+      "k": 314,
+      "events_captured": 192,
+      "expected_preventable_events": 22.092999999999996,
+      "members_with_actionable_gap": 149,
+      "eac_usd": 1183560.192116439
+    },
+    "eac": {
+      "k": 314,
+      "events_captured": 110,
+      "expected_preventable_events": 29.729,
+      "members_with_actionable_gap": 263,
+      "eac_usd": 1701688.392887933
+    },
+    "relative_gain_preventable": 0.3456298375050923
+  },
+  "10pct": {
+    "risk_only": {
+      "k": 628,
+      "events_captured": 249,
+      "expected_preventable_events": 33.982,
+      "members_with_actionable_gap": 347,
+      "eac_usd": 1737107.9717749527
+    },
+    "eac": {
+      "k": 628,
+      "events_captured": 160,
+      "expected_preventable_events": 40.334999999999994,
+      "members_with_actionable_gap": 530,
+      "eac_usd": 2059954.6417976606
+    },
+    "relative_gain_preventable": 0.18695191572008696
+  }
+}

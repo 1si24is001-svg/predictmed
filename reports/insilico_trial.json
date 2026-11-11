@@ -1,0 +1,48 @@
+{
+  "as_of": "2023-07-01",
+  "uptake": 0.6,
+  "horizon_months": 24,
+  "population": 7200,
+  "strategies": {
+    "risk_only@250": {
+      "K": 250,
+      "members_intervened": 124,
+      "factual_deteriorations": 219,
+      "deteriorations_averted": 9,
+      "dialysis_starts_averted": 10,
+      "crash_starts_averted": 3,
+      "selected_with_actionable_gap": 99,
+      "mean_p_deterioration": 0.7247636188431815
+    },
+    "eac@250": {
+      "K": 250,
+      "members_intervened": 151,
+      "factual_deteriorations": 163,
+      "deteriorations_averted": 21,
+      "dialysis_starts_averted": 19,
+      "crash_starts_averted": 8,
+      "selected_with_actionable_gap": 208,
+      "mean_p_deterioration": 0.43331196360957974
+    },
+    "risk_only@500": {
+      "K": 500,
+      "members_intervened": 269,
+      "factual_deteriorations": 360,
+      "deteriorations_averted": 27,
+      "dialysis_starts_averted": 22,
+      "crash_starts_averted": 7,
+      "selected_with_actionable_gap": 258,
+      "mean_p_deterioration": 0.518623901649658
+    },
+    "eac@500": {
+      "K": 500,
+      "members_intervened": 296,
+      "factual_deteriorations": 272,
+      "deteriorations_averted": 47,
+      "dialysis_starts_averted": 27,
+      "crash_starts_averted": 12,
+      "selected_with_actionable_gap": 416,
+      "mean_p_deterioration": 0.32442263197349325
+    }
+  }
+}

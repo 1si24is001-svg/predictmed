@@ -1,0 +1,81 @@
+# PredictMed — central configuration. Every run records a hash of this file in its manifest.
+project: predictmed
+version: "1.0.0"
+seed: 20261029
+
+paths:
+  data: data
+  lakehouse: data/lakehouse          # Apache Iceberg warehouse (SQLite catalog for local mode)
+  state_db: data/state.db            # idempotency keys, score results, HITL queue
+  artifacts: artifacts               # model bundles
+  reports: reports
+  mlflow_uri: sqlite:///data/mlflow.db
+
+simulation:
+  n_members: 50000
+  start: "2019-01-01"
+  months: 84                         # 2019-01 .. 2025-12
+  rapid_progressor_share: 0.08       # latent phenotype the system must discover
+
+cohort:
+  index_dates: ["2020-07-01", "2021-01-01", "2021-07-01", "2022-01-01", "2022-07-01",
+                "2023-01-01", "2023-07-01", "2024-01-01"]
+  lookback_months: 24
+  horizon_months: 12
+  crash_horizon_months: 24
+  min_age: 18
+  egfr_decline_threshold: 0.40     # FDA/EMA-accepted surrogate endpoint (40% decline)
+  eskd_egfr: 15
+
+split:                               # member-grouped AND out-of-time
+  train_frac: 0.70
+  valid_frac: 0.15
+  test_frac: 0.15
+  train_max_index: "2022-01-01"      # train outcome windows close before test windows open
+  valid_index: ["2022-07-01", "2023-01-01"]
+  test_index: ["2023-07-01", "2024-01-01"]
+
+streaming:
+  backend: memory                    # memory | kafka
+  bootstrap_servers: localhost:9092
+  max_retries: 3
+  topics:
+    observation: clinical.observation.v1
+    encounter: clinical.encounter.v1
+    medication: clinical.medication.v1
+    claim: claims.claim.v1
+    snapshot: features.snapshot.v1
+    score_request: risk.score.request.v1
+    score_result: risk.score.result.v1
+    dlq: data.quality.dlq.v1
+    agent_action: agent.action.v1
+
+promotion_gates:
+  min_auprc_lift_over_prevalence: 2.0
+  min_auroc: 0.75
+  calibration_slope: [0.8, 1.2]
+  max_ece: 0.03
+  max_subgroup_auroc_gap: 0.08
+  conformal_coverage_tolerance: 0.03
+  plan_calibration_oe_min: 0.80
+  plan_calibration_oe_max: 1.25
+  plan_calibration_min_events: 30
+
+conformal:
+  alpha: 0.10
+  alphas: [0.05, 0.10, 0.20]
+
+outreach:
+  capacity_per_month: 500            # care-manager slots
+  cost_progression_usd: 26000        # illustrative annual incremental cost of progression / AKI events
+  cost_crash_dialysis_usd: 95000     # illustrative first-year cost differential, crash vs planned start
+
+llm:
+  enabled_if_env: ANTHROPIC_API_KEY
+  model_env: PREDICTMED_LLM_MODEL
+  default_model: claude-sonnet-4-5
+
+
+synthea:
+  data_dir: data/synthea
+  skip_if_missing: true
